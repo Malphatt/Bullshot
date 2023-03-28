@@ -14,7 +14,7 @@ public class TitleBull : MonoBehaviour {
 
     IEnumerator FireShit() {
         while (title) {
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.0f);
             GameObject shit = Instantiate(Shit, transform.GetChild(0).position, transform.GetChild(0).rotation);
             shit.GetComponent<Rigidbody>().AddForce((-transform.forward + (transform.right * Random.Range(-1.125f, 1.125f))) * 500);
         }
